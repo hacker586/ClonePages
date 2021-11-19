@@ -7,7 +7,7 @@
       bottom: 0;
       right: 0;
       width: auto;
-      border: 3px solid #00495f;
+      border: 0px solid #00495f;
       z-index: 1;
     }
     </style>
@@ -42,7 +42,7 @@
 
     <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="#">DENTEUR</a>
+            <a class="navbar-brand" href="#"> <img src="logo.png" alt="" style="height: 45px;"></a>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
@@ -107,35 +107,61 @@
         <br>
         
       </div>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-5">
-          <p style="color: blue;">OUR OFFICE</p>
-          <h1>Get in Touch</h1>
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
-          <form>
-            <div class="mb-3 mt-3">
-              <label for="email" class="form-label">Email:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="contact-info">
+                  <h5>OUR OFFICE</h5>
+                  <h2>Get In Touch</h2> 
+                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                  <form id="contact-form" method="post" action="contact.php">
+                  <div class="messages"></div>
+                      <div class="controls">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <input id="form_name" type="text" name="name" class="form-control customize-contact" placeholder="Name" required="required" data-error="Firstname is required.">
+                                      <div class="help-block with-errors"></div>
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input id="form_email" type="email" name="email" class="form-control customize-contact" placeholder="Email address" required="required" data-error="Valid email is required.">
+                                      <div class="help-block with-errors"></div>
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <input id="form_phone" type="tel" name="phone" class="form-control customize-contact" placeholder="Please enter your phone">
+                                      <div class="help-block with-errors"></div>
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="col-md-12">
+                                  <div class="form-group">
+                                      <textarea id="form_message" name="message" class="form-control customize-contact" placeholder="Your message" rows="3" required="required" data-error="Please,leave us a message."></textarea>
+                                      <div class="help-block with-errors"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                              <div class="col-md-12 submit-btn">
+                                  <p><input type="submit" class="btn btn-primary" value="Send message"></p>
+                              </div>
+                          </div>
+                      </div>
+                  </form> 
+              </div>  
             </div>
-            <div class="mb-3">
-              <label for="pwd" class="form-label">Password:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            <div class="col-lg-6 space-break">
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60249.012744802465!2d72.80484292766923!3d19.3013482113915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b02afa358a35%3A0x2356aebf3c63cb2a!2sBhayandar%2C%20Mira%20Bhayandar%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1637253548545!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>  
             </div>
-            <div class="mb-3">
-              <label for="pwd" class="form-label">Mobile No.:</label>
-              <input type="number" class="form-control" id="number" placeholder="Enter phone number">
-            </div>
-            <div class="form-check mb-3">
-              <label for="comment">Comments:</label>
-              <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-5"> <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=bhayandar, mumbai 401105&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.fnfgo.com/">FNF Online</a></div><style>.mapouter{position:relative;text-align:right;width:800px;height:600px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;}</style></div> </div>
-      </div>
+          </div>
       <br>
       <div class="row">
         <div class="col-sm-1"></div>
@@ -146,6 +172,7 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-1"></div>
         <div class="col-sm-2" style="text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg> <br><h3>Email</h3><p>info@denteur.com</p><p>support@denteur.com</p></div>
+        
       </div>
 
       
